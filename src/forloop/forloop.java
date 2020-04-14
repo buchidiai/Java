@@ -24,13 +24,13 @@ public class forloop {
 
         //found prime number and exited after count reached 3
         int count = 0;
-        for (int i = 1; 1 < 20; i++) {
+        for (int i = 1; 1 < 100; i++) {
 
 
             if (isPrime(i)) {
                 count++;
                 System.out.println("Number " + i + " is a prime member");
-                if (count == 3) {
+                if (count == 100) {
                     System.out.println("Loop has exited");
                     break;
 
