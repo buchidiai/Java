@@ -22,16 +22,17 @@ package overloading;
 //        Use int or long for your number data types is probably a good idea.
 //        1 minute = 60 seconds and 1 hour = 60 minutes or 3600 seconds.
 //        Methods should be static as we have used previously.
-//
-//        Bonus:
+
 
 public class overloadingChallenge {
 
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
 
     public static void main(String[] args) {
 
         System.out.println(getDurationString(400,50));
         System.out.println(getDurationString(5684));
+        System.out.println(getDurationString(-4));
 
 
 
@@ -43,12 +44,12 @@ public class overloadingChallenge {
     public static String getDurationString(int minutes, int seconds){
 
         if(minutes <= 0){
-            return "Invalid value 1";
+            return INVALID_VALUE_MESSAGE;
         }
 
         if(seconds <= 0 || seconds > 60){
 
-            return "Invalid value 2";
+            return INVALID_VALUE_MESSAGE;
 
         }
 
@@ -64,7 +65,7 @@ public class overloadingChallenge {
 
         if(seconds <= 0){
 
-            return "Invalid value 3";
+            return INVALID_VALUE_MESSAGE;
 
         }
 
