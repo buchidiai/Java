@@ -1,6 +1,4 @@
-import oop1.BankAccount;
-import oop1.Car;
-import oop1.VipCustomer;
+import oop1.*;
 
 public class Main {
 
@@ -21,6 +19,14 @@ public class Main {
 
         VipCustomer vip3 = new VipCustomer("Jones", 30000, "Jones@gmail.com");
         System.out.println(vip3.getName());
+
+
+
+        Animal animal = new Animal("Lion", 1, 1, 5, 5);
+
+        Dog dog = new Dog("Yorkie", 8, 20, 2, 4, 1, 20, "long silky");
+        dog.eat();
+
 
     }
 }
