@@ -1,28 +1,32 @@
 package oop1;
 
-public class Car {
+public class Car extends Vehicle {
 
-
-    private int doors;
     private int wheels;
-    private String model;
-    private String engine;
-    private String color;
+    private int doors;
+    private int gears;
+    private boolean isManual;
 
+    private int currentGear;
 
-    public void setModel(String model){
-        String validModel = model.toLowerCase();
-
-        if(validModel.equals("s500") || validModel.equals("c300")){
-            this.model = model;
-        } else {
-            this.model = "unknown";
-        }
-
+    public Car(String name, String size, int wheels, int doors, int gears, boolean isManual) {
+        super(name, size);
+        this.wheels = wheels;
+        this.doors = doors;
+        this.gears = gears;
+        this.isManual = isManual;
+        this.currentGear = 1;
     }
 
-    public String getModel(){
-        return this.model;
+    public void changeGear(int currentGear) {
+        this.currentGear = currentGear;
+        System.out.println("Car.setCurrentGear(): Change to " + this.currentGear + " gear.");
+    }
+
+    public void changeVelocity(int speed, int direction) {
+        move(speed,direction);
+        System.out.println("Car.changeVelocity() : Velocity " + speed + " direction " + direction);
     }
 
 }
+
