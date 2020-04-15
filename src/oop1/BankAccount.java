@@ -14,10 +14,28 @@ package oop1;
 
 public class BankAccount {
     private int accountNumber;
-    private int balance;
+    private double balance;
     private String customerName;
     private String email;
     private String phoneNumber;
+
+    //called if constructor is empty
+    public BankAccount() {
+        //this contructor calls the other constructor;
+        this(00000000, 0.0, "john doe", null, null);
+        System.out.println("empty constructor");
+    }
+
+    //called if custructor is not empty
+    //dont call getters or setters in constructor
+    public BankAccount(int accountNumber, double balance, String customerName, String email, String phoneNumber) {
+        System.out.println("non empty constructor");
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 
 
     //setters
@@ -26,7 +44,7 @@ public class BankAccount {
         this.accountNumber = accountNumber;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -49,7 +67,7 @@ public class BankAccount {
         return this.accountNumber;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return this.balance;
     }
 
@@ -66,13 +84,13 @@ public class BankAccount {
     }
 
 
-    public void depositFunds(int amount) {
+    public void depositFunds(long amount) {
         this.setBalance(amount);
 
         System.out.println("You desposited $" + amount + " into account ending in " + this.getAccountNumber() % 100000);
     }
 
-    public void withdrawFunds(int amount) {
+    public void withdrawFunds(long amount) {
 
         if (amount <= 0) {
             System.out.println("cannot withdraw negative amount");

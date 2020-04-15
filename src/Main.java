@@ -1,20 +1,26 @@
 import oop1.BankAccount;
 import oop1.Car;
+import oop1.VipCustomer;
 
 public class Main {
 
     public static void main(String[] args) {
         Car benz = new Car();
         benz.setModel("s500");
-        System.out.println("The benz model is "+benz.getModel());
+
 
         BankAccount customer1 = new BankAccount();
-        customer1.setAccountNumber(1232435454);
-        customer1.setCustomerName("Mike jones");
-        customer1.setEmail("mikejones@gmail.com");
-        customer1.setPhoneNumber("123 456-7890");
-        customer1.depositFunds(5000);
-        customer1.withdrawFunds(340);
+        customer1.depositFunds(59303);
+        customer1.withdrawFunds(34043);
+
+        VipCustomer vip1 = new VipCustomer();
+        System.out.println(vip1.getName());
+
+        VipCustomer vip2 = new VipCustomer("chris", 30000);
+        System.out.println(vip2.getName());
+
+        VipCustomer vip3 = new VipCustomer("Jones", 30000, "Jones@gmail.com");
+        System.out.println(vip3.getName());
 
     }
 }
