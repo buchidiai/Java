@@ -23,11 +23,35 @@ public class Dog extends Animal {
         System.out.println("Dog.chew() called");
     }
 
+    //override method from animal class and make unique for dog class
     @Override
     public void eat() {
         System.out.println("Dog.eat() called");
         chew();
         super.eat();
-        super.move();
+
+    }
+
+    public void walk() {
+        System.out.println("Dog.walk() called");
+        move(5);
+    }
+
+    public void run() {
+        System.out.println("Dog.run() called");
+        super.move(10);
+    }
+
+    private void moveLegs(int speed) {
+        System.out.println("Dog.movelegs() called");
+
+    }
+
+    //overrides animal class method of move
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
     }
 }

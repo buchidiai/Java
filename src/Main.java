@@ -6,7 +6,6 @@ public class Main {
         Car benz = new Car();
         benz.setModel("s500");
 
-
         BankAccount customer1 = new BankAccount();
         customer1.depositFunds(59303);
         customer1.withdrawFunds(34043);
@@ -25,6 +24,8 @@ public class Main {
         Animal animal = new Animal("Lion", 1, 1, 5, 5);
 
         Dog dog = new Dog("Yorkie", 8, 20, 2, 4, 1, 20, "long silky");
+        dog.walk();
+        dog.run();
         dog.eat();
 
 
