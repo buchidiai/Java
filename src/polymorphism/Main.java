@@ -10,6 +10,14 @@ public class Main {
                     " : " + movie.getName() + "\n" +
                     "Plot: " + movie.plot() + "\n");
         }
+
+        for (int i = 1; i < 4; i++) {
+            Car car = randomCar();
+            System.out.println("Car #" + i + "" + car.getName());
+            System.out.println(car.getName() + " has " + car.startEngine());
+            System.out.println(car.getName() + " is " + car.accelerate());
+            System.out.println(car.getName() + " is rapidly " + car.brake());
+        }
     }
 
     public static Movie randomMovie() {
@@ -30,4 +38,21 @@ public class Main {
 
         return null;
     }
+
+    public static Car randomCar() {
+        int randomNumber = (int) (Math.random() * 3) + 1;
+        System.out.println("Random number generated was: " + randomNumber);
+        switch (randomNumber) {
+            case 1:
+                return new Acura();
+            case 2:
+                return new BMW();
+            case 3:
+                return new Lexus();
+
+        }
+
+        return null;
+    }
 }
+
