@@ -24,9 +24,11 @@ public class Main {
     }
 
     public static int findMin(int[] array) {
+        //get first index in array passed in
         int min = array[0];
 
         for (int i = 0; i < array.length; i++) {
+            //check if first item in array < static min value
             if (array[i] < min) {
                 min = array[i];
             }
