@@ -16,6 +16,7 @@ public class MobilePhone {
     public boolean addNewContact(Contact contact) {
         if (findContact(contact.getName()) >= 0) {
             System.out.println("Contact already exisits.");
+            return false;
         }
         myContacts.add(contact);
         return true;
@@ -25,6 +26,9 @@ public class MobilePhone {
         int foundPosition = findContact(oldContact);
         if (foundPosition < 0) {
             System.out.println(oldContact.getName() + " does not exist.");
+            return false;
+        } else if (findContact(newContact.getName()) != -1) {
+            System.out.println("Contact with name " + newContact.getName() + " already exists. Update failed");
             return false;
         }
 
