@@ -23,4 +23,34 @@ public class Main {
     // e.g. check if exists, or does not exist, etc.
     // Think about where you are adding the code to perform certain actions
 
+    public static void main(String[] args) {
+
+        Bank bank = new Bank("boss national Bank");
+
+        bank.addBranch("Dallas");
+        bank.addCustomer("Dallas", "Mike", 50.23);
+        bank.addCustomer("Dallas", "Tim", 300.56);
+        bank.addCustomer("Dallas", "John", 100.43);
+        bank.addCustomer("Dallas", "Chris", 10000.56);
+        bank.addCustomer("Dallas", "Tommy", 32.32);
+
+        bank.addBranch("Mesquite");
+        bank.addCustomer("Mesquite", "Johnny", 200.56);
+        bank.addCustomer("Mesquite", "Jim", 3000.23);
+        bank.addCustomer("Mesquite", "Kenny", 25.56);
+        bank.addCustomer("Mesquite", "Don", 75000.34);
+        bank.addCustomer("Mesquite", "Mike", 50.23);
+        bank.addCustomer("Mesquite", "Angel", 1000);
+        bank.addCustomer("Mesquite", "Lisa", 200.32);
+
+        bank.addCustomertransaction("Dallas", "Mike", 40.34);
+        bank.addCustomertransaction("Dallas", "Mike", 9000);
+        bank.addCustomertransaction("Dallas", "Mike", 659.98);
+        bank.addCustomertransaction("Dallas", "Tim", 5000.34);
+        bank.addCustomertransaction("Dallas", "John", 40.34);
+
+
+        bank.listCustomers("Dallas", true);
+        bank.listCustomers("Mesquite", true);
+    }
 }
