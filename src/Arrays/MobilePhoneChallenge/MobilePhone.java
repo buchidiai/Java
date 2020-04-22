@@ -1,4 +1,4 @@
-package Arrays.MobilePhone;
+package Arrays.MobilePhoneChallenge;
 
 import java.util.ArrayList;
 
