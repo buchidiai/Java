@@ -6,6 +6,18 @@ public class Song {
 
     public Song(String title, double duration) {
         this.title = title;
-        Duration = duration;
+        this.Duration = duration;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "title='" + title + '\'' +
+                ", Duration=" + Duration +
+                '}';
     }
 }
