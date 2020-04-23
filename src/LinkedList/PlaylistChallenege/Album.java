@@ -26,13 +26,9 @@ public class Album {
         for (Song checkedSong : this.songs) {
             if (checkedSong.getTitle().equals(title)) {
                 return checkedSong;
-
             }
-
         }
         return null;
-
-
     }
 
 
@@ -40,7 +36,7 @@ public class Album {
         int index = trackNumber - 1;
         if ((index >= 0) && (index <= this.songs.size())) {
             playList.add(this.songs.get(index));
-
+            return true;
         }
         System.out.println("This album does not have a track " + trackNumber);
         return false;
