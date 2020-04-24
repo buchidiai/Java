@@ -15,8 +15,7 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song{" + title + '\'' +
-                ", Duration=" + Duration +
-                '}';
+        String info = this.title + " Duration: "+ this.Duration;
+        return info;
     }
 }
