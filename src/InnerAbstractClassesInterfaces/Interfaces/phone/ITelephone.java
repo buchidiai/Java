@@ -1,4 +1,4 @@
-package InnerAbstractClassesInterfaces.Interfaces;
+package InnerAbstractClassesInterfaces.Interfaces.phone;
 
 public interface ITelephone {
     //start with an I to denote its an interface

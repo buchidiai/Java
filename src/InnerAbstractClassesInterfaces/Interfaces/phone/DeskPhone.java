@@ -1,4 +1,4 @@
-package InnerAbstractClassesInterfaces.Interfaces;
+package InnerAbstractClassesInterfaces.Interfaces.phone;
 
 public class DeskPhone implements ITelephone {
 

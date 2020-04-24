@@ -1,4 +1,4 @@
-package InnerAbstractClassesInterfaces.Interfaces;
+package InnerAbstractClassesInterfaces.Interfaces.phone;
 
 public class Main {
 
@@ -11,6 +11,14 @@ public class Main {
 
         timsPhone.powerOn();
         timsPhone.callPhone(976456987);
+        timsPhone.dial(1234567);
 
+
+
+        timsPhone = new MobilePhone(1243535);
+
+        timsPhone.powerOn();
+        timsPhone.callPhone(24354);
+        timsPhone.answer();
     }
 }
