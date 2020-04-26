@@ -15,6 +15,10 @@ public class Animal {
         this.weight = weight;
     }
 
+    public Animal() {
+        super();
+    }
+
     public void eat() {
         System.out.println("Animal.eat() called");
     }
