@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Dog dog = new Dog("Yorkie");
-  
+
         dog.eat();
 
         Parrot parrot = new Parrot("Australian ringneck");
