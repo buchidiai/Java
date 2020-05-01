@@ -22,9 +22,6 @@ public class Main {
     // Change your program so that ALL variables (including the scanner
     // instance) are called x.
     public static void main(String[] args) {
-
-
-
         X x = new X(new Scanner(System.in));
         x.x();
 
