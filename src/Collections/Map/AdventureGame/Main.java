@@ -17,47 +17,61 @@ public class Main {
         locations.put(4, new Location(4, "You are in a valley beside a stream"));
         locations.put(5, new Location(5, "You are in the forest"));
 
-        int loc = 1;
-        while (true) {
-            System.out.println(locations.get(loc).getDescription());
-            if (loc == 0) {
-                break;
-            }
+        locations.get(1).addExit("W", 2);
+        locations.get(1).addExit("E", 3);
+        locations.get(1).addExit("S", 4);
+        locations.get(1).addExit("N", 5);
+//        locations.get(1).addExit("Q", 0);
 
-            loc = scanner.nextInt();
-            if (!locations.containsKey(loc)) {
-                System.out.println("You cannot go in that direction");
-            }
+        locations.get(2).addExit("N", 5);
+//        locations.get(2).addExit("Q", 0);
+
+        locations.get(3).addExit("W", 1);
+//        locations.get(3).addExit("Q", 0);
+
+        locations.get(4).addExit("N", 1);
+        locations.get(4).addExit("W", 2);
+//        locations.get(4).addExit("Q", 0);
+
+        locations.get(5).addExit("S", 1);
+        locations.get(5).addExit("W", 2);
+//        locations.get(5).addExit("Q", 0);
+
+        int loc = 1;
+//        while(true) {
+//            System.out.println(locations.get(loc).getDescription());
+//            if(loc == 0) {
+//                break;
+//            }
+//
+//            Map<String, Integer> exits = locations.get(loc).getExits();
+//            System.out.print("Available exits are ");
+//            for(String exit: exits.keySet()) {
+//                System.out.print(exit + ", ");
+//            }
+//            System.out.println();
+//
+//            String direction = scanner.nextLine().toUpperCase();
+//
+//            if(exits.containsKey(direction)) {
+//                loc = exits.get(direction);
+//
+//            } else {
+//                System.out.println("You cannot go in that direction");
+//            }
+//        }
+
+        String[] road = "You are standing at the end of a road before a small brick building".split(" ");
+        for (String i : road) {
+            System.out.println(i);
         }
 
+        System.out.println("==================================");
+
+        String[] building = "You are inside a building, a well house for a small spring".split(", ");
+        for (String i : building) {
+            System.out.println(i);
+        }
     }
-
-
-//    public static void main(String[] args) {
-//        Map<String, String> languages = new HashMap<>();
-//        if(languages.containsKey("Java")) {
-//            System.out.println("Java already exists");
-//        } else {
-//            languages.put("Java", "a compiled high level, object-oriented, platform independent language");
-//            System.out.println("Java added successfully");
-//        }
-//
-//        languages.put("Python", "an interpreted, object-oriented, high-level programming language with dynamic semantics");
-//        languages.put("Algol", "an algorithmic language");
-//        System.out.println(languages.put("BASIC", "Beginners All Purposes Symbolic Instruction Code"));
-//        System.out.println(languages.put("Lisp", "Therein lies madness"));
-//
-//        if(languages.containsKey("Java")) {
-//            System.out.println("Java is already in the map");
-//        } else {
-//            languages.put("Java", "this course is about Java");
-//        }
-//
-//        System.out.println("================================================");
-//
-//        for(String key: languages.keySet()) {
-//            System.out.println(key + " : " + languages.get(key));
-//        }
-//    }
-
 }
+
